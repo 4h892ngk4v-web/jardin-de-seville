@@ -23,6 +23,7 @@
   <main>
     <!-- HERO -->
     <section class="hero">
+      <div class="petals" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
       <div class="hero__text">
         <p class="label">Eau de parfum · 50 ml · Binnenkort</p>
         <h1>Een lentebries<br><em>in een flesje</em></h1>
@@ -30,17 +31,17 @@
         <a href="#inschrijven" class="btn">Ontdek als eerste</a>
       </div>
       <figure class="hero__visual">
-        <div class="sun" aria-hidden="true"></div>
+        <div class="sun" aria-hidden="true"></div><span class="sparkle s1" aria-hidden="true"></span><span class="sparkle s2" aria-hidden="true"></span><span class="sparkle s3" aria-hidden="true"></span>
         <img src="jds_product_amber_01.jpg" alt="Flesje Jardin de Séville eau de parfum in warm zonlicht" width="1024" height="1024">
       </figure>
     </section>
 
     <!-- VERHAAL -->
     <section class="story" id="verhaal">
-      <div class="story__img">
+      <div class="story__img reveal">
         <img src="jds_product_amber_03.jpg" alt="Amberkleurig parfumflesje van Jardin de Séville" loading="lazy" width="1024" height="1024">
       </div>
-      <div class="story__text">
+      <div class="story__text reveal">
         <p class="label">Ons verhaal</p>
         <h2>Een ochtend in Sevilla</h2>
         <p>In de binnentuinen van Sevilla schijnt de zon door de sinaasappelbomen. De oranjebloesem staat in bloei en er hangt een zachte, warme geur in de lucht.</p>
@@ -49,35 +50,66 @@
     </section>
 
     <!-- NOTEN -->
+    <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C240 10 480 10 720 40 C960 70 1200 70 1440 30 L1440 80 L0 80Z" fill="hsl(15, 45%, 55%)"/></svg>
     <section class="notes">
       <p class="label">De geur</p>
-      <h2>Drie tonen, één zonnig gevoel</h2>
+      <h2 class="reveal">Drie tonen, één zonnig gevoel</h2>
       <ul class="notes__list">
-        <li><span class="dot dot--cream"></span><h3>Oranjebloesem</h3><p>Fris en vrolijk, als de eerste lentedag.</p></li>
-        <li><span class="dot dot--gold"></span><h3>Jasmijn</h3><p>Zacht en bloemig, nooit te zwaar.</p></li>
-        <li><span class="dot dot--amber"></span><h3>Warm amber</h3><p>Een gouden gloed die blijft hangen.</p></li>
+        <li class="reveal"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+<defs><radialGradient id="gb" cx="50%" cy="85%" r="80%"><stop offset="0" stop-color="#F5E7CE"/><stop offset=".55" stop-color="#FFFDF8"/><stop offset="1" stop-color="#F3D9C7"/></radialGradient>
+<radialGradient id="gbc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF1C2"/><stop offset=".6" stop-color="#E9B65A"/><stop offset="1" stop-color="#C07259"/></radialGradient></defs>
+<g class="flower__shadow"><ellipse cx="62" cy="64" rx="46" ry="46" fill="#39251F" opacity=".18"/></g>
+<ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(0 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(72 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(144 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(216 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(288 60 60)"/>
+<circle cx="60" cy="60" r="12" fill="url(#gbc)"/>
+<circle cx="75.0" cy="60.0" r="2.6" fill="#E9B65A"/><circle cx="70.610824037508" cy="70.60237771658049" r="2.6" fill="#E9B65A"/><circle cx="60.011944900661" cy="74.99999524397752" r="2.6" fill="#E9B65A"/><circle cx="49.406075327699924" cy="70.61926362972648" r="2.6" fill="#E9B65A"/><circle cx="45.00001902408691" cy="60.0238897937473" r="2.6" fill="#E9B65A"/><circle cx="49.372303512115906" cy="49.41453508997285" r="2.6" fill="#E9B65A"/><circle cx="59.96416532831578" cy="45.00004280418423" r="2.6" fill="#E9B65A"/><circle cx="70.57699843512634" cy="49.36387739336675" r="2.6" fill="#E9B65A"/>
+<circle cx="56" cy="56" r="3" fill="#fff" opacity=".7"/></svg><h3>Oranjebloesem</h3><p>Fris en vrolijk, als de eerste lentedag.</p></li>
+        <li class="reveal"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+<defs><linearGradient id="gj" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#FBF1E4"/><stop offset="1" stop-color="#EBC9B4"/></linearGradient>
+<radialGradient id="gjc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF6D6"/><stop offset="1" stop-color="#E9B65A"/></radialGradient></defs>
+<ellipse cx="63" cy="65" rx="44" ry="44" fill="#39251F" opacity=".16"/>
+<path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(18 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(90 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(162 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(234 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(306 60 60)"/>
+<circle cx="60" cy="60" r="7" fill="url(#gjc)"/><circle cx="58" cy="58" r="2" fill="#fff" opacity=".8"/></svg><h3>Jasmijn</h3><p>Zacht en bloemig, nooit te zwaar.</p></li>
+        <li class="reveal"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+<defs><radialGradient id="ga" cx="50%" cy="90%" r="85%"><stop offset="0" stop-color="#8B5139"/><stop offset=".5" stop-color="#C07259"/><stop offset="1" stop-color="#E9B65A"/></radialGradient>
+<radialGradient id="ga2" cx="50%" cy="80%" r="80%"><stop offset="0" stop-color="#C07259"/><stop offset="1" stop-color="#F2C77A"/></radialGradient>
+<radialGradient id="gac" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#F2C77A"/><stop offset="1" stop-color="#39251F"/></radialGradient></defs>
+<ellipse cx="63" cy="65" rx="48" ry="48" fill="#39251F" opacity=".2"/>
+<ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(0 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(30 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(60 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(90 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(120 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(150 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(180 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(210 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(240 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(270 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(300 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(330 60 60)"/>
+<ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(15 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(45 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(75 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(105 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(135 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(165 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(195 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(225 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(255 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(285 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(315 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(345 60 60)"/>
+<circle cx="60" cy="60" r="12" fill="url(#gac)"/><circle cx="56" cy="56" r="3.5" fill="#FFF1C2" opacity=".6"/></svg><h3>Warm amber</h3><p>Een gouden gloed die blijft hangen.</p></li>
       </ul>
     </section>
 
     <!-- GEZIN -->
     <section class="family">
-      <div class="family__text">
+      <div class="family__text reveal">
         <p class="label">Voor het hele gezin</p>
         <h2>Van mama tot dochter,<br>van papa tot zoon</h2>
         <p>Eén lichte geur voor iedereen thuis. Naar school, naar het werk, naar het strand.</p>
       </div>
-      <img src="jds_product_amber_04.jpg" alt="Jardin de Séville parfum op een lichte achtergrond" loading="lazy" width="1024" height="1024">
+      <img class="reveal" src="jds_product_amber_04.jpg" alt="Jardin de Séville parfum op een lichte achtergrond" width="1024" height="1024">
     </section>
 
     <!-- INSCHRIJVEN (CTA) -->
     <section class="signup" id="inschrijven">
       <p class="label">Nieuwsbrief</p>
-      <h2>Ruik de lente als eerste</h2>
+      <h2 class="reveal">Ruik de lente als eerste</h2>
       <p>Schrijf je in en ontvang als eerste nieuws over onze lancering.</p>
 
       <!-- MAILERLITE: plak hieronder de embed-code van je MailerLite-formulier
            (MailerLite › Forms › jouw formulier › Embed › "HTML code").
-           Plak het <script>-deel uit MailerLite onderaan, net voor </body>. -->
+           Plak het <script>-deel uit MailerLite onderaan, net voor   <script>
+    // Secties schuiven zachtjes in beeld bij het scrollen
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('is-visible'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
+      }, { threshold: 0.15 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>. -->
       <div class="signup__form" id="mailerlite-form">
         <p class="signup__placeholder">Hier komt het MailerLite-formulier (naam, e-mail, opt-in).</p>
       </div>
