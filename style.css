@@ -1,0 +1,142 @@
+/* Jardin de Séville — kleuren en fonts volgens BRAND_GUIDELINES.md */
+:root {
+  --terracotta: hsl(15, 45%, 55%);   /* #C07259 hoofdkleur */
+  --gold: #E9B65A;                   /* Golden Sun */
+  --cream: #F5E7CE;                  /* Soft Cream */
+  --amber: #8B5139;                  /* Amber Brown */
+  --cocoa: #39251F;                  /* Deep Cocoa */
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "futura-pt", "Jost", Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--cocoa);
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.5;
+}
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.1; }
+h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); }
+h1 em { font-style: italic; color: var(--terracotta); }
+h2 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1rem; }
+h3 { font-size: 1.4rem; margin: .8rem 0 .3rem; }
+p + p { margin-top: 1rem; }
+
+.label {
+  font-family: var(--sans);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2em;          /* tracking +200 */
+  font-size: .78rem;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+.lead { font-size: 1.2rem; max-width: 30ch; margin: 1.2rem 0 2rem; }
+.small { font-size: .85rem; opacity: .8; margin-top: 1rem; }
+
+.btn {
+  display: inline-block;
+  background: var(--amber);       /* wit op Amber Brown = 6,3:1 contrast */
+  color: #fff;
+  font-family: var(--sans);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .8rem;
+  text-decoration: none;
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+  transition: background .2s, transform .2s;
+}
+.btn:hover, .btn:focus-visible { background: var(--cocoa); transform: translateY(-2px); }
+.btn--small { padding: .7rem 1.2rem; font-size: .7rem; }
+
+/* Header */
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem clamp(1rem, 5vw, 4rem);
+}
+
+/* Hero */
+.hero {
+  display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 3rem;
+  padding: 2rem clamp(1rem, 5vw, 4rem) 5rem;
+  background: linear-gradient(180deg, var(--cream) 0%, #f7dcae 100%);
+  overflow: hidden;
+}
+.hero__visual { position: relative; }
+.hero__visual img {
+  position: relative; border-radius: 50% 50% 1.5rem 1.5rem;
+  box-shadow: 0 30px 60px -30px rgba(57,37,31,.45);
+}
+.sun {
+  position: absolute; inset: -6% -6% auto auto; width: 70%; aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--gold) 0%, rgba(233,182,90,.35) 45%, rgba(233,182,90,0) 70%);
+}
+
+/* Verhaal */
+.story {
+  display: grid; grid-template-columns: 1fr 1.1fr; gap: 4rem; align-items: center;
+  padding: 6rem clamp(1rem, 5vw, 4rem);
+}
+.story__img img { border-radius: 1.5rem; }
+.story__text p:not(.label) { max-width: 52ch; }
+
+/* Noten */
+.notes {
+  background: var(--terracotta); color: #fff; text-align: center;
+  padding: 6rem clamp(1rem, 5vw, 4rem);
+}
+.notes .label { color: var(--cream); }
+.notes h2 { color: #fff; }   /* groot genoeg voor wit op terracotta */
+.notes__list {
+  list-style: none; padding: 0; margin-top: 3rem;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;
+}
+.notes__list p { color: var(--cream); }
+.notes__list li { background: rgba(57,37,31,.18); border-radius: 1.5rem; padding: 2.5rem 1.5rem; }
+.dot { display: inline-block; width: 3rem; height: 3rem; border-radius: 50%; }
+.dot--cream { background: var(--cream); }
+.dot--gold { background: var(--gold); }
+.dot--amber { background: var(--amber); }
+.notes__list p { font-size: 1.05rem; }
+
+/* Gezin */
+.family {
+  display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: center;
+  padding: 6rem clamp(1rem, 5vw, 4rem);
+}
+.family img { border-radius: 1.5rem; }
+
+/* Inschrijven */
+.signup {
+  background: var(--gold); text-align: center;
+  padding: 6rem clamp(1rem, 5vw, 4rem);
+}
+.signup .label { color: var(--cocoa); }
+.signup__form { max-width: 520px; margin: 2rem auto 0; }
+.signup__placeholder {
+  border: 2px dashed var(--cocoa); border-radius: 1rem; padding: 2rem;
+}
+
+/* Footer */
+.foot {
+  background: var(--cocoa); color: var(--cream); text-align: center;
+  padding: 4rem 1rem; font-size: .9rem;
+}
+.foot img { margin: 0 auto 1.5rem; }
+
+/* Mobiel */
+@media (max-width: 760px) {
+  .hero, .story, .family { grid-template-columns: 1fr; gap: 2rem; }
+  .family img { order: -1; }
+  .notes__list { grid-template-columns: 1fr; }
+  .story, .family, .notes, .signup { padding-top: 4rem; padding-bottom: 4rem; }
+}
