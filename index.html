@@ -7,122 +7,218 @@
   <meta name="description" content="Jardin de Séville: een lichte lentegeur met oranjebloesem, jasmijn en warm amber. Voor ouders én tieners. Schrijf je in en ontdek als eerste onze lancering.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fraunces = primair font. Jost = gratis stand-in voor Futura PT (Adobe Fonts). Met een Adobe Fonts-webproject kan Futura PT hier toegevoegd worden. -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Fraunces = primair font. Jost = gratis stand-in voor Futura PT (Adobe Fonts). -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header class="top">
-    <a href="#" class="top__logo" aria-label="Jardin de Séville — home">
-      <img src="jds_logo_deepcocoa.svg" alt="Jardin de Séville" width="180">
+  <!-- NAVIGATIE -->
+  <header class="nav">
+    <nav class="nav__links" aria-label="Hoofdmenu">
+      <a href="#verhaal">Verhaal</a>
+      <a href="#geur">De geur</a>
+      <a href="#gezin">Gezin</a>
+    </nav>
+    <a href="#" class="nav__logo" aria-label="Jardin de Séville — home">
+      <img src="jds_logo_deepcocoa.svg" alt="Jardin de Séville" width="170">
     </a>
-    <a href="#inschrijven" class="btn btn--small">Schrijf je in</a>
+    <a href="#inschrijven" class="pill pill--dark">Schrijf je in</a>
   </header>
 
   <main>
     <!-- HERO -->
     <section class="hero">
+      <div class="hero__bg" style="background-image:url('jds_product_amber_03.jpg')" role="img" aria-label="Witte bloesemtak in warm zonlicht voor een terracotta muur"></div>
       <div class="petals" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="hero__text">
-        <p class="label">Eau de parfum · 50 ml · Binnenkort</p>
-        <h1>Een lentebries<br><em>in een flesje</em></h1>
-        <p class="lead">Oranjebloesem, jasmijn en warm amber. Een lichte, vrolijke geur die ouders én tieners graag dragen.</p>
-        <a href="#inschrijven" class="btn">Ontdek als eerste</a>
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--light">Eau de parfum · Binnenkort</p>
+        <h1>Een lentebries <em>in een flesje</em></h1>
+        <a href="#inschrijven" class="pill pill--light">Ontdek als eerste</a>
       </div>
-      <figure class="hero__visual">
-        <div class="sun" aria-hidden="true"></div><span class="sparkle s1" aria-hidden="true"></span><span class="sparkle s2" aria-hidden="true"></span><span class="sparkle s3" aria-hidden="true"></span>
-        <img src="jds_product_amber_01.jpg" alt="Flesje Jardin de Séville eau de parfum in warm zonlicht" width="1024" height="1024">
-      </figure>
+      <p class="hero__foot" aria-hidden="true">Oranjebloesem · Jasmijn · Warm amber</p>
     </section>
 
-    <!-- VERHAAL -->
-    <section class="story" id="verhaal">
-      <div class="story__img reveal">
-        <img src="jds_product_amber_03.jpg" alt="Amberkleurig parfumflesje van Jardin de Séville" loading="lazy" width="1024" height="1024">
-      </div>
-      <div class="story__text reveal">
-        <p class="label">Ons verhaal</p>
-        <h2>Een ochtend in Sevilla</h2>
-        <p>In de binnentuinen van Sevilla schijnt de zon door de sinaasappelbomen. De oranjebloesem staat in bloei en er hangt een zachte, warme geur in de lucht.</p>
-        <p>Dat gevoel wilden we in een flesje stoppen. Jardin de Séville is een geur zonder zwaarte: fris genoeg voor elke schooldag, warm genoeg voor een zondag in het park. Een geur die je samen deelt.</p>
-      </div>
+    <!-- WELKOM -->
+    <section class="intro reveal" id="verhaal">
+      <p class="eyebrow">Welkom in onze tuin</p>
+      <h2 class="caps">Een ochtend in Sevilla</h2>
+      <p>In de binnentuinen van Sevilla schijnt de zon door de sinaasappelbomen. De oranjebloesem staat in bloei en er hangt een zachte, warme geur in de lucht. Dat gevoel stopten we in een flesje.</p>
     </section>
 
-    <!-- NOTEN -->
-    <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C240 10 480 10 720 40 C960 70 1200 70 1440 30 L1440 80 L0 80Z" fill="hsl(15, 45%, 55%)"/></svg>
-    <section class="notes">
-      <p class="label">De geur</p>
-      <h2 class="reveal">Drie tonen, één zonnig gevoel</h2>
-      <ul class="notes__list">
-        <li class="reveal"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+    <!-- DE GEUR -->
+    <section class="notes" id="geur">
+      <h2 class="mix reveal"><span class="mix__sans">drie</span> <em>tonen</em></h2>
+      <p class="eyebrow center reveal">Eén zonnig gevoel</p>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__visual card__visual--cream"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
 <defs><radialGradient id="gb" cx="50%" cy="85%" r="80%"><stop offset="0" stop-color="#F5E7CE"/><stop offset=".55" stop-color="#FFFDF8"/><stop offset="1" stop-color="#F3D9C7"/></radialGradient>
 <radialGradient id="gbc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF1C2"/><stop offset=".6" stop-color="#E9B65A"/><stop offset="1" stop-color="#C07259"/></radialGradient></defs>
 <g class="flower__shadow"><ellipse cx="62" cy="64" rx="46" ry="46" fill="#39251F" opacity=".18"/></g>
 <ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(0 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(72 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(144 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(216 60 60)"/><ellipse cx="60" cy="31" rx="19" ry="27" fill="url(#gb)" transform="rotate(288 60 60)"/>
 <circle cx="60" cy="60" r="12" fill="url(#gbc)"/>
 <circle cx="75.0" cy="60.0" r="2.6" fill="#E9B65A"/><circle cx="70.610824037508" cy="70.60237771658049" r="2.6" fill="#E9B65A"/><circle cx="60.011944900661" cy="74.99999524397752" r="2.6" fill="#E9B65A"/><circle cx="49.406075327699924" cy="70.61926362972648" r="2.6" fill="#E9B65A"/><circle cx="45.00001902408691" cy="60.0238897937473" r="2.6" fill="#E9B65A"/><circle cx="49.372303512115906" cy="49.41453508997285" r="2.6" fill="#E9B65A"/><circle cx="59.96416532831578" cy="45.00004280418423" r="2.6" fill="#E9B65A"/><circle cx="70.57699843512634" cy="49.36387739336675" r="2.6" fill="#E9B65A"/>
-<circle cx="56" cy="56" r="3" fill="#fff" opacity=".7"/></svg><h3>Oranjebloesem</h3><p>Fris en vrolijk, als de eerste lentedag.</p></li>
-        <li class="reveal"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+<circle cx="56" cy="56" r="3" fill="#fff" opacity=".7"/></svg></div>
+          <h3 class="caps">Oranjebloesem</h3>
+          <p>Fris en vrolijk, als de eerste lentedag in de tuin.</p>
+          <a href="#inschrijven" class="pill">Ontdek</a>
+        </article>
+        <article class="card reveal">
+          <div class="card__visual card__visual--terra"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
 <defs><linearGradient id="gj" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#FBF1E4"/><stop offset="1" stop-color="#EBC9B4"/></linearGradient>
 <radialGradient id="gjc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF6D6"/><stop offset="1" stop-color="#E9B65A"/></radialGradient></defs>
 <ellipse cx="63" cy="65" rx="44" ry="44" fill="#39251F" opacity=".16"/>
 <path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(18 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(90 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(162 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(234 60 60)"/><path d="M60 60 C52 44 52 22 60 8 C68 22 68 44 60 60Z" fill="url(#gj)" stroke="#E8CDB8" stroke-width=".8" transform="rotate(306 60 60)"/>
-<circle cx="60" cy="60" r="7" fill="url(#gjc)"/><circle cx="58" cy="58" r="2" fill="#fff" opacity=".8"/></svg><h3>Jasmijn</h3><p>Zacht en bloemig, nooit te zwaar.</p></li>
-        <li class="reveal"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+<circle cx="60" cy="60" r="7" fill="url(#gjc)"/><circle cx="58" cy="58" r="2" fill="#fff" opacity=".8"/></svg></div>
+          <h3 class="caps">Jasmijn</h3>
+          <p>Zacht en bloemig, licht genoeg voor elke dag.</p>
+          <a href="#inschrijven" class="pill">Ontdek</a>
+        </article>
+        <article class="card reveal">
+          <div class="card__visual card__visual--gold"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
 <defs><radialGradient id="ga" cx="50%" cy="90%" r="85%"><stop offset="0" stop-color="#8B5139"/><stop offset=".5" stop-color="#C07259"/><stop offset="1" stop-color="#E9B65A"/></radialGradient>
 <radialGradient id="ga2" cx="50%" cy="80%" r="80%"><stop offset="0" stop-color="#C07259"/><stop offset="1" stop-color="#F2C77A"/></radialGradient>
 <radialGradient id="gac" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#F2C77A"/><stop offset="1" stop-color="#39251F"/></radialGradient></defs>
 <ellipse cx="63" cy="65" rx="48" ry="48" fill="#39251F" opacity=".2"/>
 <ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(0 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(30 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(60 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(90 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(120 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(150 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(180 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(210 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(240 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(270 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(300 60 60)"/><ellipse cx="60" cy="27" rx="11" ry="22" fill="url(#ga)" transform="rotate(330 60 60)"/>
 <ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(15 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(45 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(75 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(105 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(135 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(165 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(195 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(225 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(255 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(285 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(315 60 60)"/><ellipse cx="60" cy="38" rx="9" ry="16" fill="url(#ga2)" transform="rotate(345 60 60)"/>
-<circle cx="60" cy="60" r="12" fill="url(#gac)"/><circle cx="56" cy="56" r="3.5" fill="#FFF1C2" opacity=".6"/></svg><h3>Warm amber</h3><p>Een gouden gloed die blijft hangen.</p></li>
-      </ul>
-    </section>
-
-    <!-- GEZIN -->
-    <section class="family">
-      <div class="family__text reveal">
-        <p class="label">Voor het hele gezin</p>
-        <h2>Van mama tot dochter,<br>van papa tot zoon</h2>
-        <p>Eén lichte geur voor iedereen thuis. Naar school, naar het werk, naar het strand.</p>
+<circle cx="60" cy="60" r="12" fill="url(#gac)"/><circle cx="56" cy="56" r="3.5" fill="#FFF1C2" opacity=".6"/></svg></div>
+          <h3 class="caps">Warm amber</h3>
+          <p>Een gouden gloed die blijft hangen, als het laatste zonlicht.</p>
+          <a href="#inschrijven" class="pill">Ontdek</a>
+        </article>
       </div>
-      <img class="reveal" src="jds_product_amber_04.jpg" alt="Jardin de Séville parfum op een lichte achtergrond" width="1024" height="1024">
     </section>
 
-    <!-- INSCHRIJVEN (CTA) -->
-    <section class="signup" id="inschrijven">
-      <p class="label">Nieuwsbrief</p>
-      <h2 class="reveal">Ruik de lente als eerste</h2>
-      <p>Schrijf je in en ontvang als eerste nieuws over onze lancering.</p>
+    <!-- SPLIT 1 -->
+    <section class="split">
+      <div class="split__text reveal">
+        <p class="eyebrow">Ons verhaal</p>
+        <h2 class="caps">Het is tijd voor<br>je gouden uur</h2>
+        <p>Jardin de Séville is een geur zonder zwaarte. Fris genoeg voor een schooldag, warm genoeg voor een zondag in het park. Geïnspireerd door warm zonlicht, terracotta muren en bloesem die in de wind danst.</p>
+        <a href="#inschrijven" class="pill">Schrijf je in</a>
+      </div>
+      <div class="split__img"><img src="jds_product_amber_03.jpg" alt="Jardin de Séville parfum met witte bloesemtak in warm zonlicht"></div>
+    </section>
 
-      <!-- MAILERLITE: plak hieronder de embed-code van je MailerLite-formulier
-           (MailerLite › Forms › jouw formulier › Embed › "HTML code").
-           Plak het <script>-deel uit MailerLite onderaan, net voor   <script>
-    // Secties schuiven zachtjes in beeld bij het scrollen
+    <!-- SPLIT 2 -->
+    <section class="split split--reverse" id="gezin">
+      <div class="split__img"><img src="jds_product_amber_04.jpg" alt="Jardin de Séville parfum op marmer voor een terracotta muur"></div>
+      <div class="split__text reveal">
+        <p class="eyebrow">Voor het hele gezin</p>
+        <h2 class="caps">Eén geur,<br>samen gedeeld</h2>
+        <ul class="lines">
+          <li><span>Voor mama en papa</span><span aria-hidden="true">+</span></li>
+          <li><span>Voor tieners</span><span aria-hidden="true">+</span></li>
+          <li><span>Voor schooldagen en werkdagen</span><span aria-hidden="true">+</span></li>
+          <li><span>Voor zondagen in de zon</span><span aria-hidden="true">+</span></li>
+        </ul>
+        <a href="#inschrijven" class="pill">Ontvang als eerste nieuws</a>
+      </div>
+    </section>
+
+    <!-- COLLAGE -->
+    <section class="collage">
+      <h2 class="mix mix--big reveal"><span class="mix__sans">jardin</span> <em>de Séville</em></h2>
+      <div class="collage__grid">
+        <img class="c1 reveal" src="jds_product_amber_02.jpg" alt="">
+        <img class="c2 reveal" src="jds_product_amber_03.jpg" alt="">
+        <img class="c3 reveal" src="jds_product_amber_01.jpg" alt="">
+        <img class="c4 reveal" src="jds_product_amber_04.jpg" alt="">
+      </div>
+      <p class="collage__text reveal">Geïnspireerd door de binnentuinen van Sevilla. Zachte tonen van oranjebloesem, jasmijn en warm amber.</p>
+    </section>
+
+    <!-- INSCHRIJVEN -->
+    <section class="signup" id="inschrijven">
+      <div class="signup__visual" style="background-image:url('jds_product_amber_02.jpg')" role="img" aria-label="Jardin de Séville parfum"></div>
+      <div class="signup__panel">
+        <h2 class="mix mix--light"><span class="mix__sans">schrijf je</span> <em>in</em></h2>
+        <p class="signup__lead">Ruik de lente als eerste. Ontvang nieuws over onze lancering en het verhaal achter de geur.</p>
+
+        <!-- FORMULIER
+             Koppelen aan MailerLite: vervang action="#" door de action-URL uit de
+             MailerLite embed-code (Forms › jouw formulier › Embed › HTML code).
+             De veldnamen fields[name] en fields[email] zijn die van MailerLite. -->
+        <form class="form" id="signup-form" action="#" method="post" novalidate>
+          <div class="form__row">
+            <label class="field">
+              <span>Naam</span>
+              <input type="text" name="fields[name]" autocomplete="given-name" required placeholder="Je voornaam">
+            </label>
+            <label class="field">
+              <span>E-mail</span>
+              <input type="email" name="fields[email]" autocomplete="email" required placeholder="jij@voorbeeld.be">
+            </label>
+          </div>
+          <label class="check">
+            <input type="checkbox" name="gdpr[]" value="nieuwsbrief" required>
+            <span>Ja, ik wil de nieuwsbrief van Jardin de Séville ontvangen. Uitschrijven kan altijd.</span>
+          </label>
+          <button type="submit" class="pill pill--light">Inschrijven</button>
+          <p class="form__msg" role="status" aria-live="polite"></p>
+        </form>
+        <p class="small">We gebruiken je gegevens enkel voor onze nieuwsbrief en delen ze met niemand.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="foot__grid">
+      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+        <text><textPath href="#circle">JARDIN DE SÉVILLE · EAU DE PARFUM · SEVILLA ·</textPath></text>
+        <text x="100" y="118" text-anchor="middle" class="badge__mono">JS</text>
+      </svg>
+      <div>
+        <p class="eyebrow">Menu</p>
+        <ul class="foot__menu">
+          <li><a href="#verhaal">Verhaal</a></li>
+          <li><a href="#geur">De geur</a></li>
+          <li><a href="#gezin">Gezin</a></li>
+          <li><a href="#inschrijven">Nieuwsbrief</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Over dit project</p>
+        <p>Jardin de Séville is een fictief merk, gemaakt voor de opdracht Creative Automation (Artevelde × LUCA) door Eva Agyei. Teksten geschreven met Claude, beelden gemaakt met Adobe Photoshop en Firefly.</p>
+      </div>
+    </div>
+    <div class="foot__strip" aria-hidden="true">
+      <img src="jds_product_amber_01.jpg" alt=""><img src="jds_product_amber_02.jpg" alt=""><img src="jds_product_amber_03.jpg" alt=""><img src="jds_product_amber_04.jpg" alt="">
+    </div>
+  </footer>
+
+  <script>
+    // Secties schuiven zachtjes in beeld
     (function () {
       var els = document.querySelectorAll('.reveal');
       if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('is-visible'); }); return; }
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
-      }, { threshold: 0.15 });
+      }, { threshold: 0.12 });
       els.forEach(function (e) { io.observe(e); });
     })();
+
+    // Formulier: controle + bedankt-bericht (tot de MailerLite-koppeling er is)
+    (function () {
+      var form = document.getElementById('signup-form');
+      var msg = form.querySelector('.form__msg');
+      form.addEventListener('submit', function (e) {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+          msg.textContent = 'Vul je naam en e-mail in en vink het vakje aan.';
+          return;
+        }
+        if (form.getAttribute('action') === '#') {
+          e.preventDefault();
+          msg.textContent = 'Bedankt! Je bent ingeschreven. ☀️';
+          form.reset();
+        }
+      });
+    })();
   </script>
-</body>. -->
-      <div class="signup__form" id="mailerlite-form">
-        <p class="signup__placeholder">Hier komt het MailerLite-formulier (naam, e-mail, opt-in).</p>
-      </div>
-
-      <p class="small">Je gegevens gebruiken we enkel voor onze nieuwsbrief. Uitschrijven kan altijd.</p>
-    </section>
-  </main>
-
-  <footer class="foot">
-    <img src="jds_logo_wit.svg" alt="Jardin de Séville" width="200">
-    <p>Jardin de Séville is een fictief merk, gemaakt voor de opdracht Creative Automation (Artevelde × LUCA) door Eva Agyei.</p>
-    <p>Teksten geschreven met Claude, beelden gemaakt met Adobe Firefly en Photoshop.</p>
-  </footer>
-
 </body>
 </html>
