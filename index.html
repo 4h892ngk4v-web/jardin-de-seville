@@ -140,7 +140,8 @@
         <!-- FORMULIER — gekoppeld aan MailerLite (formulier "Inschrijving landingspagina",
              groep "Jardin de Séville nieuwsbrief"). Eigen opmaak, zelfde velden als de
              MailerLite embed-code: fields[name], fields[email], gdpr[]. -->
-        <form class="form" id="signup-form" action="https://assets.mailerlite.com/jsonp/2786645/forms/203821817814582744/subscribe" method="post" novalidate>
+        <iframe name="ml-frame" title="MailerLite" hidden></iframe>
+        <form class="form" id="signup-form" action="https://assets.mailerlite.com/jsonp/2786645/forms/203821817814582744/subscribe" method="post" target="ml-frame" novalidate>
           <div class="form__row">
             <label class="field">
               <span>Naam</span>
@@ -191,28 +192,18 @@
       els.forEach(function (e) { io.observe(e); });
     })();
 
-    // Formulier: controle + verzenden naar MailerLite + bedankt-bericht
+    // Formulier: controle, dan gewoon versturen naar MailerLite in een verborgen frame
     (function () {
       var form = document.getElementById('signup-form');
       var msg = form.querySelector('.form__msg');
-      var btn = form.querySelector('button[type="submit"]');
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
         if (!form.checkValidity()) {
+          e.preventDefault();
           msg.textContent = 'Vul je naam en e-mail in en vink het vakje aan.';
           return;
         }
-        btn.disabled = true;
-        msg.textContent = 'Even geduld…';
-        fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
-          .then(function () {
-            msg.textContent = 'Bedankt! Je bent ingeschreven. Kijk zo meteen in je mailbox. ☀️';
-            form.reset();
-          })
-          .catch(function () {
-            msg.textContent = 'Er ging iets mis. Probeer het later opnieuw.';
-          })
-          .finally(function () { btn.disabled = false; });
+        msg.textContent = 'Bedankt! Bevestig je inschrijving via de mail in je inbox. ☀️';
+        setTimeout(function () { form.reset(); }, 800);
       });
     })();
   </script>
