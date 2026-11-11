@@ -52,7 +52,7 @@
       <p class="eyebrow center reveal">Eén zonnig gevoel</p>
       <div class="cards">
         <article class="card reveal">
-          <div class="card__visual card__visual--cream"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+          <div class="card__visual card__visual--cream"><img class="card__photo" src="jds_noot_oranjebloesem.jpg" alt="Oranjebloesem in warm zonlicht" onerror="this.remove()"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
 <defs><radialGradient id="gb" cx="50%" cy="85%" r="80%"><stop offset="0" stop-color="#F5E7CE"/><stop offset=".55" stop-color="#FFFDF8"/><stop offset="1" stop-color="#F3D9C7"/></radialGradient>
 <radialGradient id="gbc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF1C2"/><stop offset=".6" stop-color="#E9B65A"/><stop offset="1" stop-color="#C07259"/></radialGradient></defs>
 <g class="flower__shadow"><ellipse cx="62" cy="64" rx="46" ry="46" fill="#39251F" opacity=".18"/></g>
@@ -65,7 +65,7 @@
           <a href="#inschrijven" class="pill">Ontdek</a>
         </article>
         <article class="card reveal">
-          <div class="card__visual card__visual--terra"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+          <div class="card__visual card__visual--terra"><img class="card__photo" src="jds_noot_jasmijn.jpg" alt="Witte jasmijnbloemen op terracotta" onerror="this.remove()"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
 <defs><linearGradient id="gj" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".7" stop-color="#FBF1E4"/><stop offset="1" stop-color="#EBC9B4"/></linearGradient>
 <radialGradient id="gjc" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#FFF6D6"/><stop offset="1" stop-color="#E9B65A"/></radialGradient></defs>
 <ellipse cx="63" cy="65" rx="44" ry="44" fill="#39251F" opacity=".16"/>
@@ -76,7 +76,7 @@
           <a href="#inschrijven" class="pill">Ontdek</a>
         </article>
         <article class="card reveal">
-          <div class="card__visual card__visual--gold"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
+          <div class="card__visual card__visual--gold"><img class="card__photo" src="jds_noot_amber.jpg" alt="Warme amberkleurige bloemen in gouden licht" onerror="this.remove()"><svg class="flower" viewBox="0 0 120 120" aria-hidden="true">
 <defs><radialGradient id="ga" cx="50%" cy="90%" r="85%"><stop offset="0" stop-color="#8B5139"/><stop offset=".5" stop-color="#C07259"/><stop offset="1" stop-color="#E9B65A"/></radialGradient>
 <radialGradient id="ga2" cx="50%" cy="80%" r="80%"><stop offset="0" stop-color="#C07259"/><stop offset="1" stop-color="#F2C77A"/></radialGradient>
 <radialGradient id="gac" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#F2C77A"/><stop offset="1" stop-color="#39251F"/></radialGradient></defs>
@@ -137,11 +137,10 @@
         <h2 class="mix mix--light"><span class="mix__sans">schrijf je</span> <em>in</em></h2>
         <p class="signup__lead">Ruik de lente als eerste. Ontvang nieuws over onze lancering en het verhaal achter de geur.</p>
 
-        <!-- FORMULIER
-             Koppelen aan MailerLite: vervang action="#" door de action-URL uit de
-             MailerLite embed-code (Forms › jouw formulier › Embed › HTML code).
-             De veldnamen fields[name] en fields[email] zijn die van MailerLite. -->
-        <form class="form" id="signup-form" action="#" method="post" novalidate>
+        <!-- FORMULIER — gekoppeld aan MailerLite (formulier "Inschrijving landingspagina",
+             groep "Jardin de Séville nieuwsbrief"). Eigen opmaak, zelfde velden als de
+             MailerLite embed-code: fields[name], fields[email], gdpr[]. -->
+        <form class="form" id="signup-form" action="https://assets.mailerlite.com/jsonp/2786645/forms/203821817814582744/subscribe" method="post" novalidate>
           <div class="form__row">
             <label class="field">
               <span>Naam</span>
@@ -153,9 +152,11 @@
             </label>
           </div>
           <label class="check">
-            <input type="checkbox" name="gdpr[]" value="nieuwsbrief" required>
+            <input type="checkbox" name="gdpr[]" value="Ja, ik wil de nieuwsbrief ontvangen" required>
             <span>Ja, ik wil de nieuwsbrief van Jardin de Séville ontvangen. Uitschrijven kan altijd.</span>
           </label>
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
           <button type="submit" class="pill pill--light">Inschrijven</button>
           <p class="form__msg" role="status" aria-live="polite"></p>
         </form>
@@ -166,29 +167,17 @@
 
   <!-- FOOTER -->
   <footer class="foot">
-    <div class="foot__grid">
-      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
-        <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-        <text><textPath href="#circle">JARDIN DE SÉVILLE · EAU DE PARFUM · SEVILLA ·</textPath></text>
-        <text x="100" y="118" text-anchor="middle" class="badge__mono">JS</text>
-      </svg>
-      <div>
-        <p class="eyebrow">Menu</p>
-        <ul class="foot__menu">
-          <li><a href="#verhaal">Verhaal</a></li>
-          <li><a href="#geur">De geur</a></li>
-          <li><a href="#gezin">Gezin</a></li>
-          <li><a href="#inschrijven">Nieuwsbrief</a></li>
-        </ul>
-      </div>
-      <div>
-        <p class="eyebrow">Over dit project</p>
-        <p>Jardin de Séville is een fictief merk, gemaakt voor de opdracht Creative Automation (Artevelde × LUCA) door Eva Agyei. Teksten geschreven met Claude, beelden gemaakt met Adobe Photoshop en Firefly.</p>
-      </div>
+    <div class="foot__row">
+      <img src="jds_logo_deepcocoa.svg" alt="Jardin de Séville" width="150">
+      <nav class="foot__menu" aria-label="Footer">
+        <a href="#verhaal">Verhaal</a>
+        <a href="#geur">De geur</a>
+        <a href="#gezin">Gezin</a>
+        <a href="#inschrijven">Nieuwsbrief</a>
+      </nav>
+      <a href="#" class="foot__top">Terug naar boven ↑</a>
     </div>
-    <div class="foot__strip" aria-hidden="true">
-      <img src="jds_product_amber_01.jpg" alt=""><img src="jds_product_amber_02.jpg" alt=""><img src="jds_product_amber_03.jpg" alt=""><img src="jds_product_amber_04.jpg" alt="">
-    </div>
+    <p class="foot__note">© 2026 Jardin de Séville — fictief merk voor de opdracht Creative Automation (Artevelde × LUCA), door Eva Agyei. Teksten met Claude, beelden met Adobe Photoshop en Firefly.</p>
   </footer>
 
   <script>
@@ -202,21 +191,28 @@
       els.forEach(function (e) { io.observe(e); });
     })();
 
-    // Formulier: controle + bedankt-bericht (tot de MailerLite-koppeling er is)
+    // Formulier: controle + verzenden naar MailerLite + bedankt-bericht
     (function () {
       var form = document.getElementById('signup-form');
       var msg = form.querySelector('.form__msg');
+      var btn = form.querySelector('button[type="submit"]');
       form.addEventListener('submit', function (e) {
+        e.preventDefault();
         if (!form.checkValidity()) {
-          e.preventDefault();
           msg.textContent = 'Vul je naam en e-mail in en vink het vakje aan.';
           return;
         }
-        if (form.getAttribute('action') === '#') {
-          e.preventDefault();
-          msg.textContent = 'Bedankt! Je bent ingeschreven. ☀️';
-          form.reset();
-        }
+        btn.disabled = true;
+        msg.textContent = 'Even geduld…';
+        fetch(form.action, { method: 'POST', mode: 'no-cors', body: new FormData(form) })
+          .then(function () {
+            msg.textContent = 'Bedankt! Je bent ingeschreven. Kijk zo meteen in je mailbox. ☀️';
+            form.reset();
+          })
+          .catch(function () {
+            msg.textContent = 'Er ging iets mis. Probeer het later opnieuw.';
+          })
+          .finally(function () { btn.disabled = false; });
       });
     })();
   </script>
