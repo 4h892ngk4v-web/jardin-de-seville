@@ -216,3 +216,15 @@ body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedB
 body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description { color: var(--cream) !important; font-family: var(--sans) !important; font-weight: 400 !important; font-size: .9rem !important; }
 body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before { background-color: transparent !important; border: 1px solid var(--gold) !important; border-radius: 4px !important; }
 body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before { background-color: var(--gold) !important; border-color: var(--gold) !important; }
+
+/* Fix: floats van MailerLite opvangen + Chrome-autofill in de huisstijl */
+#mlb2-48394804 form::after, #mlb2-48394804 .ml-form-embedBody::after { content: ""; display: block; clear: both; }
+.signup__panel .small { clear: both; display: block; }
+body #mlb2-48394804 input:-webkit-autofill,
+body #mlb2-48394804 input:-webkit-autofill:hover,
+body #mlb2-48394804 input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--cream) !important;
+  -webkit-box-shadow: 0 0 0 1000px var(--cocoa) inset !important;
+  caret-color: var(--cream);
+}
+body #mlb2-48394804 .ml-form-embedPermissionsOptionsCheckbox label { cursor: pointer; }
