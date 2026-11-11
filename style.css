@@ -138,18 +138,13 @@ h3.caps { font-size: 1.15rem; letter-spacing: .08em; }
 .check input { margin-top: .25rem; accent-color: var(--gold); width: 16px; height: 16px; flex-shrink: 0; }
 .form__msg { margin-top: 1rem; min-height: 1.5em; color: var(--gold); }
 
-/* Footer */
-.foot { background: var(--paper); padding: 4rem var(--pad) 0; border-top: 1px solid var(--line); font-size: .85rem; }
-.foot__grid { display: grid; grid-template-columns: auto 1fr 2fr; gap: 3rem; align-items: start; max-width: 1100px; margin: 0 auto 3rem; }
-.badge { width: 130px; height: 130px; animation: rotate 30s linear infinite; }
-.badge text { font-family: var(--sans); font-size: 14.5px; letter-spacing: 3px; fill: var(--cocoa); }
-.badge .badge__mono { font-family: var(--serif); font-style: italic; font-size: 48px; letter-spacing: 0; fill: var(--terracotta); }
-@keyframes rotate { to { transform: rotate(360deg); } }
-.foot__menu { list-style: none; }
-.foot__menu a { text-decoration: none; }
-.foot__menu a:hover { color: var(--terracotta); }
-.foot__strip { display: grid; grid-template-columns: repeat(4, 1fr); }
-.foot__strip img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+/* Footer (eenvoudig) */
+.foot { background: var(--paper); border-top: 1px solid var(--line); padding: 2.5rem var(--pad) 2rem; font-size: .8rem; }
+.foot__row { display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; }
+.foot__menu { display: flex; gap: 1.8rem; flex-wrap: wrap; }
+.foot__menu a, .foot__top { text-decoration: none; text-transform: uppercase; letter-spacing: .18em; font-size: .66rem; font-weight: 400; }
+.foot__menu a:hover, .foot__top:hover { color: var(--terracotta); }
+.foot__note { max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(57,37,31,.12); opacity: .7; font-size: .75rem; }
 
 /* In beeld schuiven */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s ease, transform 1s ease; }
@@ -167,7 +162,7 @@ h3.caps { font-size: 1.15rem; letter-spacing: .08em; }
   .split__text { padding: 4rem 1.5rem; }
   .form__row { grid-template-columns: 1fr; }
   .signup__visual { min-height: 320px; }
-  .foot__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .foot__row { flex-direction: column; align-items: flex-start; }
   .collage__grid { height: 120vw; }
   .c1 { width: 46%; } .c2 { width: 52%; left: 40%; top: 18%; } .c3 { width: 44%; left: 2%; top: 52%; } .c4 { width: 40%; top: 62%; }
 }
@@ -178,3 +173,46 @@ h3.caps { font-size: 1.15rem; letter-spacing: .08em; }
   .reveal { opacity: 1; transform: none; }
   .petals { display: none; }
 }
+
+/* AI-foto's van de geurnoten (Firefly); de 3D-bloem blijft als reserve eronder */
+.card__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; transition: transform 1.2s ease; }
+.card:hover .card__photo { transform: scale(1.06); }
+
+/* ---------- MailerLite-formulier in Jardin de Séville-stijl ---------- */
+#mlb2-48394804.ml-form-embedContainer { display: block; }
+#mlb2-48394804 .ml-form-align-center { text-align: left !important; }
+#mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper { background: transparent !important; max-width: 560px !important; display: block !important; }
+#mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+#mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody { padding: 0 !important; }
+#mlb2-48394804 .ml-form-embedBody .ml-form-embedContent { display: none; }
+#mlb2-48394804 .ml-form-embedBody .ml-form-fieldRow input {
+  background: transparent !important; color: var(--cream) !important; border: 1px solid rgba(245,231,206,.55) !important;
+  border-radius: 999px !important; padding: .9rem 1.3rem !important; font-family: var(--sans) !important; font-size: 1rem !important; }
+#mlb2-48394804 .ml-form-embedBody .ml-form-fieldRow input::placeholder { color: rgba(245,231,206,.6) !important; }
+#mlb2-48394804 .ml-form-embedBody .ml-form-fieldRow { margin-bottom: .9rem !important; }
+#mlb2-48394804 .ml-form-embedPermissions h4,
+#mlb2-48394804 .ml-form-embedPermissions p,
+#mlb2-48394804 .ml-form-embedPermissions .label-description { color: var(--cream) !important; font-family: var(--sans) !important; font-size: .85rem !important; }
+#mlb2-48394804 .ml-form-embedPermissions h4 { color: var(--gold) !important; text-transform: uppercase !important; letter-spacing: .18em !important; font-size: .68rem !important; margin-top: .8rem !important; }
+#mlb2-48394804 .ml-form-embedPermissions .label-description::before { background-color: transparent !important; border-color: var(--gold) !important; border-radius: 4px !important; }
+#mlb2-48394804 .ml-form-embedPermissions input[type=checkbox]:checked ~ .label-description::before { background-color: var(--gold) !important; }
+#mlb2-48394804 .ml-form-embedSubmit { margin-top: 1.2rem !important; }
+#mlb2-48394804 .ml-form-embedSubmit button.primary {
+  width: auto !important; background: transparent !important; color: var(--paper) !important; border: 1px solid var(--paper) !important;
+  border-radius: 999px !important; padding: .8rem 2.2rem !important; font-family: var(--sans) !important; font-weight: 400 !important;
+  font-size: .72rem !important; letter-spacing: .2em !important; text-transform: uppercase !important; }
+#mlb2-48394804 .ml-form-embedSubmit button.primary:hover { background: var(--paper) !important; color: var(--cocoa) !important; }
+#mlb2-48394804 .ml-form-embedSubmit button.loading { background: transparent !important; border: 1px solid var(--paper) !important; border-radius: 999px !important; width: auto !important; padding: .8rem 2.2rem !important; }
+#mlb2-48394804 .ml-form-successBody h4 { color: var(--gold) !important; font-family: var(--serif) !important; font-style: italic; font-size: 2rem !important; }
+#mlb2-48394804 .ml-form-successBody p { color: var(--cream) !important; font-family: var(--sans) !important; font-size: 1rem !important; }
+
+/* sterkere selectors zodat ze de MailerLite-opmaak overschrijven */
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input { background-color: transparent !important; color: var(--cream) !important; border: 1px solid rgba(245,231,206,.55) !important; border-radius: 999px !important; padding: .9rem 1.3rem !important; font-family: var(--sans) !important; font-size: 1rem !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::placeholder { color: rgba(245,231,206,.6) !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder { color: rgba(245,231,206,.6) !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus { border-color: var(--gold) !important; outline: none; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary { width: auto !important; background-color: transparent !important; color: var(--paper) !important; border: 1px solid var(--paper) !important; border-radius: 999px !important; padding: .8rem 2.2rem !important; font-family: var(--sans) !important; font-weight: 400 !important; font-size: .72rem !important; letter-spacing: .2em !important; text-transform: uppercase !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover { background-color: var(--paper) !important; color: var(--cocoa) !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description { color: var(--cream) !important; font-family: var(--sans) !important; font-weight: 400 !important; font-size: .9rem !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before { background-color: transparent !important; border: 1px solid var(--gold) !important; border-radius: 4px !important; }
+body #mlb2-48394804.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before { background-color: var(--gold) !important; border-color: var(--gold) !important; }
