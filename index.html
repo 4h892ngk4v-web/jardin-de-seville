@@ -872,7 +872,8 @@
               
             </div>
 
-            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2786645/forms/203821817814582744/subscribe" data-code="" method="post" target="_blank">
+            <iframe name="ml-frame" title="MailerLite" hidden></iframe>
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2786645/forms/203821817814582744/subscribe" data-code="" method="post" target="ml-frame">
               <div class="ml-form-formContent">
                 
 
@@ -1074,5 +1075,20 @@
         <script>
             fetch("https://assets.mailerlite.com/jsonp/2786645/forms/203821817814582744/takel")
         </script>
+  <script>
+    // Reserve: als een adblocker het MailerLite-script blokkeert, verstuurt het formulier
+    // zich in een verborgen frame en tonen we zelf het bedankt-bericht.
+    (function () {
+      var box = document.getElementById('mlb2-48394804');
+      var form = box.querySelector('form');
+      form.addEventListener('submit', function () {
+        if (window.ml_jQuery) return; // MailerLite-script werkt: dat doet alles zelf
+        setTimeout(function () {
+          box.querySelector('.row-form').style.display = 'none';
+          box.querySelector('.row-success').style.display = 'block';
+        }, 600);
+      });
+    })();
+  </script>
 </body>
 </html>
